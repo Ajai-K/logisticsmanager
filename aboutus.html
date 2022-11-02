@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ABOUT US</title>
+</head>
+<body>
+	<form>
+		<div style="text-align: center;margin-top: 150px;">
+			<b><p style="font-size: 24px;color: white;">FEEL FREE TO WRITE A REVIEW</p></b>
+			<input type="text" name="name" placeholder="name" class="input">
+			<br>
+			<input type="text" name="number" placeholder="contact" class="input" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+			<br>
+			<input type="text" name="email" placeholder="email" class="input"> 
+			<br>
+			<textarea rows="10" cols="10" name="addr" style="margin-top: 10px;width: 250px;" placeholder="address"></textarea>
+			<br>
+			
+		</div>
+	</form>
+<input type="button" onclick="submit()" value="SUBMIT" style="margin-left: 42%;width: 200px;height: 30px;">
+
+<div style="background: black;color: white;margin-top: 50px;">
+	<b><p>Feel free to contact</p></b><br>
+	<p>8870888771</p>
+	
+	<p>ajaisjr@gmail.com</p>
+	
+	<p>MANAGING DIRECTOR</p>
+</div>
+</body>
+<style type="text/css">
+	body {
+  background-image: url('bg2.png');
+
+}
+p { margin:0 }
+	.input
+	{
+		width: 250px;
+		height: 20px;
+		margin-top: 10px;
+
+	}
+</style>
+<script type="text/javascript">
+	function submit()
+	{
+		alert("Form will be submitted through ajax request");
+		location.reload();
+	}
+</script>
+</html>
