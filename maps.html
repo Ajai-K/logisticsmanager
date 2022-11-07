@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>SERVICING LOCATIONS</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <h3>LOCATIONS AVAILABLE FOR SERVICING</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!--
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+  <style type="text/css">
+    /* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+  </style>
+  <script type="text/javascript">
+    var locations = [
+      ['Coimbatore',11.025157278173614, 76.96447409478081, 4],
+      ['Erode', 11.34257852203067, 77.71367677417517, 5],
+      ['Tiruppur', 11.12070195966657, 77.35625623525983, 3],
+      ['Banglore', 13.004699644478986, 77.62401558162647, 2],
+      ['Hubli', 15.366847041202469, 75.11566761538185, 1],
+      ['mumbai', 19.146917989452053, 72.88662338395342, 1],
+      ['surat', 21.201242399244308, 72.8366184707948, 1],
+      ['bhiwandi', 19.292459691103705, 73.05734877125178, 1],
+      ['jammu', 32.71632950847366, 74.86407136913792, 1]
+    ];
+    function initMap() {
+  // The location of Uluru
+  var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(11.025157278173614, 76.96447409478081),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+
+}
+
+window.initMap = initMap;
+  </script>
+</html>
