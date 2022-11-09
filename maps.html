@@ -7,6 +7,8 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+    
+
     <h3>LOCATIONS AVAILABLE FOR SERVICING</h3>
     <!--The div element for the map -->
     <div id="map"></div>
@@ -21,6 +23,10 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer
     ></script>
+    <canvas id="myCanvas" width="1000" height="500"
+style="border:3px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
   </body>
   <style type="text/css">
     /* Set the size of the div element that contains the map */
@@ -72,5 +78,12 @@
 }
 
 window.initMap = initMap;
+
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(1000,500);
+ctx.stroke();
   </script>
 </html>

@@ -39,12 +39,19 @@
 </div>
 	<form>
 		<div style="text-align: center;margin-top: 150px;">
-			<b><p style="font-size: 24px;color: white;">FEEL FREE TO WRITE A REVIEW</p></b>
+			<b><p style="font-size: 24px;color: white;">FEEL FREE TO WRITE A REVIEW</p></b><input type="reset"><br>
 			<input type="text" name="name" placeholder="name" class="input">
 			<br>
 			<input type="text" name="number" placeholder="contact" class="input" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
 			<br>
-			<input type="text" name="email" placeholder="email" class="input"> 
+      <input type="radio" id="html" name="fav_language" value="MALE">
+  <label for="html">MALE</label>
+  <input type="radio" id="css" name="fav_language" value="FEMALE">
+  <label for="css">FEMALE</label>
+  <input type="radio" id="javascript" name="fav_language" value="OTHERS">
+  <label for="javascript">OTHERS</label>
+  <br>
+			<input type="email" name="email" placeholder="email" class="input"> 
 			<br>
 			<textarea rows="10" cols="10" name="addr" style="margin-top: 10px;width: 250px;" placeholder="address"></textarea>
 			<br>
