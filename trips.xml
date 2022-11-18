@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<!DOCTYPE trips [
+<!ELEMENT trip (tripid,vehicle,from,to)>
+<!ELEMENT tripid (#PCDATA)>
+<!ELEMENT vehicle (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT to (#PCDATA)>
+]>
+
+<trips>
+
+  <trip>
+    <tripid>1</tripid>
+    <vehicle>TN32BC5675</vehicle>
+    <from>coimbatore</from>
+    <to>bhiwandi</to>
+  </trip>
+
+  <trip>
+    <tripid>2</tripid>
+    <vehicle>TN35BC1904</vehicle>
+    <from>mumbai</from>
+    <to>surat</to>
+  </trip>
+
+  <trip>
+    <tripid>3</tripid>
+    <vehicle>TN52FH1342</vehicle>
+    <from>andra</from>
+    <to>chennai</to>
+  </trip>
+
+<trip>
+    <tripid>4</tripid>
+    <vehicle>TN52F1819</vehicle>
+    <from>madurai</from>
+    <to>coimbatore</to>
+  </trip>
+
+  <trip>
+    <tripid>5</tripid>
+    <vehicle>TN19A9845</vehicle>
+    <from>madurai</from>
+    <to>chennai</to>
+  </trip>
+
+  <trip>
+    <tripid>6</tripid>
+    <vehicle>TN12U9083</vehicle>
+    <from>coimbatore</from>
+    <to>jammu</to>
+  </trip>
+
+  <trip>
+    <tripid>7</tripid>
+    <vehicle>TN52AA2985</vehicle>
+    <from>surat</from>
+    <to>jammu</to>
+  </trip>
+
+  <trip>
+    <tripid>8</tripid>
+    <vehicle>TN67A1645</vehicle>
+    <from>surat</from>
+    <to>coimabtore</to>
+  </trip>
+
+  <trip>
+    <tripid>9</tripid>
+    <vehicle>TN09FC8786</vehicle>
+    <from>salem</from>
+    <to>coimbatore</to>
+  </trip>
+
+  <trip>
+    <tripid>10</tripid>
+    <vehicle>TN19E7773</vehicle>
+    <from>tiruppur</from>
+    <to>salem</to>
+  </trip>
+  
+
+  
+
+
+</trips>
