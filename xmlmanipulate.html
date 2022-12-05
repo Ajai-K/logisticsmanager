@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		DETAILS
+	</title>
+</head>
+<body>
+	
+<table style="border:0px;">
+	<tr>
+		<td>ID</td>
+		<td>VEHICLE</td>
+		<td>FROM</td>
+		<td>TO</td>
+		<td>ACTION</td>
+	</tr>
+
+	<tbody id="demo"></tbody>
+	<tbody id="dynamic_field1"></tbody>
+</table>
+<button type="button" name="add1" id="add1" class="btn btn-success" onclick="add()">Add More</button>
+
+</body>
+<script>
+	var tab="";
+var a=0;
+var b=0;
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	parser = new DOMParser();
+xmlDoc = parser.parseFromString(this.responseText,"text/xml");
+
+for(var a=0;xmlDoc.getElementsByTagName("tripid")[a].childNodes[0].nodeValue!=null;a++)
+{
+b++;
+
+document.getElementById("demo").innerHTML +="<tr id=row"+a+"><td><input type='number' value="+
+xmlDoc.getElementsByTagName("tripid")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("vehicle")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("from")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("to")[a].childNodes[0].nodeValue+"></td><td><button type=button name=remove id="+a+" class=btn btn-danger btn_remove1 onclick=remove(id)>X</button></td></tr>";
+     
+      }
+
+
+    }
+  };
+  xhttp.open("GET", "trips.xml", true);
+  xhttp.send();
+}
+function remove(id)
+{
+	document.getElementById("row"+id).remove();
+}
+function add()
+{b++;
+document.getElementById("dynamic_field1").innerHTML+="<tr id=row"+b+"><td><input type='number'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><button type=button name=remove id="+b+" class=btn btn-danger btn_remove1 onclick=remove(id)>X</button></td> </tr>";
+}
+
+
+loadXMLDoc();
+
+
+</script>
+<style type="text/css">
+	table, th, td {
+  border: 0px solid black;
+}
+</style>
+</html>

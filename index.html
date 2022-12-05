@@ -1,224 +1,594 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>LOGISTICS MANAGEMENT</title>
+  <meta charset="utf-8">
+  <title>Transaz Loco</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src="js/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="css/sweetalert.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/aos/aos.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Avilon
+    Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
+
 <body>
-  
 
-	<nav class="nav-area">
-    
-  <ul>
-    <li><img src="images/sjrlogo.jpg" style="width:100%;height: 50px;"></li>
-    <li><a href="details.html">DETAILS</a></li>
-    <li><a href="resources.html">RESOURCES</a></li>
-    <li><a href="aboutus.html">ABOUT US</a></li>
-       
-    
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto">Transaz Loco</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></img></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          
+          <li><a href="#gallery">Gallery</a></li>
+          <li class="menu-has-children"><a href="">TASKS</a>
+            <ul>
+              <li><a href="xmlmanipulate.html">XML</a></li>
+              
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+
+    <div class="intro-text">
+      <h2>Welcome to Transaz Loco</h2>
+      <p>One Stop solution for logistics</p>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+
+    <div class="product-screens">
+
+     
+
+      <div class="product-screen-2" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/product-screen-2.png" alt="">
+      </div>
+
+      <div class="product-screen-3" data-aos="fade-up">
+        <img src="img/product-screen-3.png" alt="">
+      </div>
+
+    </div>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">About Us</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">
+            We provide solutions for logistics and logistics based <br>
+            businesses where everything is automated
+          </p>
+        </div>
+
+        
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Product Featuress Section
+    ============================-->
+    <section id="features">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8 offset-lg-4">
+            <div class="section-header" data-aos="fade" data-aos-duration="1000">
+              <h3 class="section-title">Product Featuress</h3>
+              <span class="section-divider"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 features-img">
+            <img src="img/product-features.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back">
+          </div>
+
+          <div class="col-lg-8 col-md-7 ">
+
+            <div class="row">
+
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-left">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <h4 class="title"><a href="">Minimalistic</a></h4>
+                <p class="description">There is no need of learning the software how to use because of its simplicity and minimal options</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="100">
+                <div class="icon"><i class="ion-ios-flask-outline"></i></div>
+                <h4 class="title"><a href="">Data on Cloud</a></h4>
+                <p class="description">All the data are stored on cloud with high security and backups where user can restore the checkpoints</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="200">
+                <div class="icon"><i class="ion-social-buffer-outline"></i></div>
+                <h4 class="title"><a href="">Hassle free tracking</a></h4>
+                <p class="description">Transporters can integrate their vehicle gps in order to explore various options for easy business</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="300">
+                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+                <h4 class="title"><a href="">API for Business</a></h4>
+                <p class="description">API keys can be created and can be integrated with any business with of no extra cost</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- #features -->
+
+    <!--==========================
+      Product Advanced Featuress Section
+    ============================-->
+    <section id="advanced-features">
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right" src="img/advanced-feature-1.jpg" alt="" data-aos="fade-left">
+              <div data-aos="fade-right">
+                <h2>MAKE TRACKING AVAILABLE FOR YOUR CLIENTS ALSO</h2>
+                <h3>Transport sector has been developed so far that time matters so much</h3>
+                <p>GPS in the goods carrier helps to explore various options and businesses in the transpotation industry</p>
+                <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt="">
+              <div data-aos="fade-left">
+                <h2>No need to plan for truck routes</h2>
+                <i class="ion-ios-paper-outline" data-aos="fade-left"></i>
+                <p data-aos="fade-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <i class="ion-ios-color-filter-outline" data-aos="fade-left" data-aos-delay="200"></i>
+                <p data-aos="fade-left" data-aos-delay="200">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                <i class="ion-ios-barcode-outline" data-aos="fade-left" data-aos-delay="400"></i>
+                <p data-aos="fade-left" data-aos-delay="400">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right" src="img/advanced-feature-3.jpg" alt="" data-aos="fade-left">
+              <div data-aos="fade-right">
+                <h2>DATA ANALYTICS</h2>
+                <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <i class="ion-ios-albums-outline"></i>
+                <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #advanced-features -->
+
    
-  </ul>
-</nav>
+   
+
+   
+    
+
+    <!--==========================
+      Pricing Section
+    ============================-->
+    <section id="pricing" class="section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">Pricing</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" data-aos="fade-right">
+              <h3>Free</h3>
+              <h4><sup>$</sup>0<span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
+                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
+                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
+                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="get-started-btn">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box featured" data-aos="fade-up">
+              <h3>Business</h3>
+              <h4><sup>$</sup>29<span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
+                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
+                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
+                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="get-started-btn">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" data-aos="fade-left">
+              <h3>Developer</h3>
+              <h4><sup>$</sup>49<span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
+                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
+                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
+                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="get-started-btn">Get Started</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #pricing -->
 
 
-
-
-
-<div class="slideshow-container" style="margin-top: 50px;height: 100px;">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="images/pic1.png" style="width:100%;height: 300px;">
- 
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="images/pic2.png" style="width:100%;height: 300px;">
+    
   
-</div>
+    
+    <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">Gallery</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/pic3.png" style="width:100%;height: 300px;">
-  
-</div>
+        <div class="row no-gutters">
 
-</div>
-<br>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-aos="fade-up">
+              <a href="img/gallery/gallery-1.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-1.jpg" alt="">
+              </a>
+            </div>
+          </div>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-<div style="margin-top:500px;">
-<audio controls autoplay>
-  <source src="audio/audio1.mp3" id="aud" type="audio/mp3">
-  
-  Your browser does not support the audio element.
-</audio>
-</div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-aos="fade-up">
+              <a href="img/gallery/gallery-2.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-2.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-aos="fade-up">
+              <a href="img/gallery/gallery-3.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-3.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-aos="fade-up">
+              <a href="img/gallery/gallery-4.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-4.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-aos="fade-up">
+              <a href="img/gallery/gallery-5.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-5.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-aos="fade-up">
+              <a href="img/gallery/gallery-6.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-6.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #gallery -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Transaz Loco</h3>
+              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="ion-ios-location-outline"></i>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-email-outline"></i>
+                <p>info@example.com</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="password" id="password" placeholder="password"   />
+                 
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="phone" oninput="phones()"   />
+                  
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" id="msg" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  
+                </div>
+                <div class="text-center"><button onclick="val()" type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Tranaz Loco</strong>. All Rights Reserved
+          </div>
+          
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/aos/aos.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script>
+     function phones()
+ {
+  var ph=document.getElementById("phone").value;
+  if(ph>9999999999)
+  {
+    document.getElementById("phone").value=ph.slice(0,-1);
+  }
+  if(isNaN(ph))
+  {
+    document.getElementById("phone").value=ph.slice(0,-1);
+  }
+ }
+   function val()
+   { var res="";
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var phone=document.getElementById("phone").value;
+    var password=document.getElementById("password").value;
+    var subject=document.getElementById("subject").value;
+    var msg=document.getElementById("msg").value;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    {
+     
+
+    }
+    else
+    {
+    res=res+"mail Invalid\n";
+    
+    }
+
+  var passpattern =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+        var password = document.getElementById('password').value;
+
+        if(!password.match(passpattern)) {
+            res=res+"Password Invalid\n";
+           
+        }
+        if(phone=="")
+        {
+          res=res+"Phone number is empty\n";
+        }
+        if(name=="")
+        {
+          res=res+"Name is empty\n";
+        }
+        if(subject=="")
+        {
+          res=res+"Subject is empty\n";
+        }
+
+if(res!="")
+{
+  JSalert1(res);
+   }
+   else
+   {
+  JSalert2();
+   }
+}
+
+
+function JSalert1(res){
+  swal({   title: "ALERT!",   
+    text: res,   
+    type: "warning",   
+    showCancelButton: false,      
+    confirmButtonText: "OK",     
+    closeOnConfirm: false,   
+    closeOnCancel: false }
+    );
+}
+
+function JSalert2(){
+  swal({   title: "SUCCESS!",   
+    text: "Details submitted successfully and user created",   
+    type: "success",   
+    showCancelButton: false,      
+    confirmButtonText: "OK",     
+    closeOnConfirm: false,   
+    closeOnCancel: false }, 
+    function(isConfirm){   
+        if (isConfirm) 
+    {   
+           location.reload();
+        } 
+        });
+}
+
+
+  </script>
+
 </body>
-
-<style type="text/css">
- 
-
-
-nav ul { list-style-type: none; }
-a{
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.nav-area{
-  background: #262626;
-  padding-bottom: 0px;
- position: relative;
- margin-left: -40px;
-
-}
-.nav-area:after{
-  content: '';
-  clear: both;
-  display: block;
-}
-.nav-area ul{
-  list-style: none;
-  margin: 0;
-}
-.nav-area > ul > li{
-  float: left;
-  position: relative;
-}
-.nav-area ul li a{
-  text-decoration: none;
-  color: #fff;
-  position: relative;
-  font-size: 15px;
-  padding: 15px 20px;
-  display: block;
-  z-index:100;
-
-}
-.nav-area ul li:hover a{
-  background: #34495e;
-}
-
-.nav-area ul ul{
-  position: absolute;
-  padding: 0;
-  min-width: 160px;
-  display: none;
-  top: 100%;
-  left: 0;
-}
-.nav-area ul li:hover > ul{
-  display: block;
-}
-.nav-area ul ul li:hover a{
-  background: #262626;
-}
-.nav-area ul ul li{
-  position: relative;
-}
-.nav-area ul ul ul{
-  top: 0;
-  left: 100%;
-}
-.nav-area ul ul ul li:hover a{
-  background: #34495e;
-}
-
-
-
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  width: 98%;
-  height: 100px;
-  position: relative;
-  
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-
-
-</style>
-<script>
-  
-  let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
 </html>

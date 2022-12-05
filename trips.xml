@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<!DOCTYPE trips [
-<!ELEMENT trip (tripid,vehicle,from,to)>
-<!ELEMENT tripid (#PCDATA)>
-<!ELEMENT vehicle (#PCDATA)>
-<!ELEMENT from (#PCDATA)>
-<!ELEMENT to (#PCDATA)>
-]>
+
 
 <trips>
 

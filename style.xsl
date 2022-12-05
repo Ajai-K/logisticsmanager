@@ -13,7 +13,8 @@
      
     </tr>
     <xsl:for-each select="trips/trip">
-    <xsl:sort select="to"/>
+    <xsl:sort select="from"/>
+    
     <tr bgcolor="#ccffff">
       <td><xsl:value-of select="tripid"/></td>
       <td><xsl:value-of select="vehicle"/></td>
@@ -21,6 +22,7 @@
       <td><xsl:value-of select="to"/></td>
       
     </tr>
+    </>
     </xsl:for-each>
   </table>
   </body>
