@@ -46,7 +46,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">Transaz Loco</a></h1>
+        <h1><a href="#intro" class="scrollto">Transaz Loco</a><b><p style="font-size: 15px;color: red;" id="scrollcount"></p></b></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></img></a> -->
       </div>
@@ -63,9 +63,8 @@
             <ul>
               <li><a href="xmlmanipulate.html">XML</a></li>
               
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+              <li><a href="recentuser.html">Recent User</a></li>
+              
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li>
@@ -442,6 +441,18 @@
                 </div>
                 <div class="form-group">
                   <textarea class="form-control" name="message" rows="5" data-rule="required" id="msg" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <br>
+                  <p style="display:inline-block;">Theme</p>
+                <input type="radio" name="color" id="color" value="#f7e7b0" style="accent-color: #f7e7b0;" checked> 
+<input type="radio" name="color" id="color" value="#baf2a2" style="accent-color: #baf2a2;"> 
+<input type="radio" name="color" id="color" value="#f2a2a7" style="accent-color: #f2a2a7;"> 
+
+<br>
+<p style="display:inline-block;">Image</p>
+                <lable>1</lable><input type="radio" name="img" id="imgs" value="img/user.png"  checked> 
+                <lable>2</lable>
+<input type="radio" name="img" id="imgs2" value="img/user2.jpg" > 
+
                   
                 </div>
                 <div class="text-center"><button onclick="val()" type="submit" title="Send Message">Send Message</button></div>
@@ -464,14 +475,14 @@
       <div class="row">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
-            &copy; Copyright <strong>Tranaz Loco</strong>. All Rights Reserved
+            &copy; Copyright <strong>Tranaz Loco</strong><p id="viewcount" style="font-size:15px;display: inline-block;margin-left: 20px;color: red;"></p>
           </div>
           
         </div>
         <div class="col-lg-6">
           <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">Home</a>
-            <a href="#about" class="scrollto">About</a>
+            <a onclick="av()" class="scrollto">Home</a>
+            <a href="recentuser.html" class="scrollto">About</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Use</a>
           </nav>
@@ -518,6 +529,9 @@
     var password=document.getElementById("password").value;
     var subject=document.getElementById("subject").value;
     var msg=document.getElementById("msg").value;
+    var colors=document.querySelector('input[name="color"]:checked').value;
+    var img=document.querySelector('input[name="img"]:checked').value;
+    
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
     {
      
@@ -555,6 +569,18 @@ if(res!="")
    }
    else
    {
+    document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    setCookie("name",name,2);
+    setCookie("email",email,2);
+    setCookie("phone",phone,2);
+    setCookie("color",colors,2);
+    setCookie("img",img,2);
+
+    localStorage.setItem("subject",subject);
+    localStorage.setItem("message",msg);
+
+
+    
   JSalert2();
    }
 }
@@ -588,7 +614,39 @@ function JSalert2(){
 }
 
 
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+if (sessionStorage.clickcount) {
+  sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+  document.getElementById("viewcount").innerHTML=Number(sessionStorage.clickcount)+" Page visits by you";
+} else {
+  sessionStorage.clickcount = 1;
+}
+
+
+function checkCookie() {
+  let color = getCookie("color");
+  if (color != "") {
+    
+   setvalues();
+  } else {
+    setCookie("color","#f7e7b0",2);
+  }
+}
+
+
+
+
+
   </script>
+
 
 </body>
 </html>
