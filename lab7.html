@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <style>
+          table td
+            {
+            text-align: center;
+            border-radius:5px;
+            background-color: teal;
+            font-size: 20px;
+            transition: 0.5ms;
+            color: white;
+            padding: 2px;
+
+            }
+            
+            table th
+            {
+            text-align: center;
+            border-radius:5px;
+            background-color: teal;
+            font-size: 20px;
+            transition: 0.5ms;
+            padding: 4px;
+            color: white;
+
+            }
+
+
+            table td:hover ,th:hover
+            {
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+    </style>
+    <link rel="stylesheet" href="main.css" />
+</head>
+ <body>
+  
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo" style="margin-left: 45%;font-size: 30px;">Trip Hiostory</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- NAVIGATION MENUS -->
+        
+        </ul>
+      </nav>
+    <div ng-app="myApp" ng-controller="myController" align="center">
+
+        <!--THE SEARCH BOX-->
+        <br>
+        <br>
+        <div style="padding: 30px ;"><font style="font-size: 25px;">Search&emsp;</font><input type="Search" ng-model="search" placeholder="search by keyword" style="text-align: center;height: 25px; font-family: 'Courier New', Courier, monospace;"/><br><br></div>
+
+        <table>
+            <tr>
+                <th>tripid</th>
+                    <th>vehicle</th>
+                        <th>from</th>
+                            <th>to</th>
+                            
+            </tr>
+
+            <!--TABLE ROWS WITH A FILTER-->
+            <tr ng-repeat="trip in trips | filter : search">
+
+                <td>{{trip.tripid}}</td>
+                    <td>{{trip.vehicle}}</td>
+                        <td>{{trip.from}}</td>
+                            <td>{{trip.to}}</td>
+                         
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    angular.module("myApp", [])
+        .controller('myController', ['$scope', function ($scope) {
+
+            // JSON ARRAY OBJECT.
+            $scope.trips =
+            [
+      {
+        "tripid": 1,
+        "vehicle": "TN32BC5675",
+        "from": "coimbatore",
+        "to": "bhiwandi"
+      },
+      {
+        "tripid": 2,
+        "vehicle": "TN35BC1904",
+        "from": "mumbai",
+        "to": "surat"
+      },
+      {
+        "tripid": 3,
+        "vehicle": "TN52FH1342",
+        "from": "andra",
+        "to": "chennai"
+      },
+      {
+        "tripid": 4,
+        "vehicle": "TN52F1819",
+        "from": "madurai",
+        "to": "coimbatore"
+      },
+      {
+        "tripid": 5,
+        "vehicle": "TN19A9845",
+        "from": "madurai",
+        "to": "chennai"
+      },
+      {
+        "tripid": 6,
+        "vehicle": "TN12U9083",
+        "from": "coimbatore",
+        "to": "jammu"
+      },
+      {
+        "tripid": 7,
+        "vehicle": "TN52AA2985",
+        "from": "surat",
+        "to": "jammu"
+      },
+      {
+        "tripid": 8,
+        "vehicle": "TN67A1645",
+        "from": "surat",
+        "to": "coimabtore"
+      },
+      {
+        "tripid": 9,
+        "vehicle": "TN09FC8786",
+        "from": "salem",
+        "to": "coimbatore"
+      },
+      {
+        "tripid": 10,
+        "vehicle": "TN19E7773",
+        "from": "tiruppur",
+        "to": "salem"
+      }
+    ]
+
+        } ]);
+</script>
+</html>

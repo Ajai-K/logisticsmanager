@@ -24,7 +24,7 @@
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/aos/aos.css" rel="stylesheet">
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
@@ -64,6 +64,7 @@
               <li><a href="xmlmanipulate.html">XML</a></li>
               
               <li><a href="recentuser.html">Recent User</a></li>
+              <li><a href="lab7.html">Angular</a></li>
               
             </ul>
           </li>
@@ -424,8 +425,10 @@
                   </div>
                   <div class="form-group col-lg-6">
                     <input type="text" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="button" value="Get OTP" name="" onclick="sendotp()">
                     
                   </div>
+                  
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control" name="password" id="password" placeholder="password"   />
@@ -439,8 +442,15 @@
                   <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   
                 </div>
+
                 <div class="form-group">
                   <textarea class="form-control" name="message" rows="5" data-rule="required" id="msg" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <br>
+                  <div class="form-group col-lg-6">
+                    <input type="text" class="form-control" name="otp" id="otp" placeholder="OTP"  />
+                    
+                    
+                  </div>
                   <br>
                   <p style="display:inline-block;">Theme</p>
                 <input type="radio" name="color" id="color" value="#f7e7b0" style="accent-color: #f7e7b0;" checked> 
@@ -509,6 +519,8 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script>
+    var otpstate=0;
+    var responcehash="";
      function phones()
  {
   var ph=document.getElementById("phone").value;
@@ -569,7 +581,34 @@ if(res!="")
    }
    else
    {
-    document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+if(otpstate==0)
+{
+alert("Email not verified");
+}
+else
+{
+  if(otp=="")
+  {
+    alert("Please enter otp");
+  }
+  else
+  {var otp=document.getElementById("otp").value;
+
+
+    var key="5b6a20bb-d369-438e-a0c6-9a4fbdc503f6";
+ $.ajax({
+          url:"https://cloudpal.in/api/mail/verifyotp.php?otp="+otp+"&hash="+responcehash+"&key="+key,
+          type: 'GET',
+   crossDomain: true,
+   dataType: 'text',
+   
+   success: function(data){
+     var mydata = JSON.parse(data);
+var responcestatus=mydata.data[0].status;
+if(responcestatus=="true")
+{
+   document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setCookie("name",name,2);
     setCookie("email",email,2);
     setCookie("phone",phone,2);
@@ -582,7 +621,81 @@ if(res!="")
 
     
   JSalert2();
+}
+else
+{
+  alert("OTP is invalid");
+}
+      
+        }
+      
+  });
+
+
+
+
+  }
+}
+
+
+   
    }
+}
+
+function sendotp()
+{
+var mail=document.getElementById("email").value;
+var dname="Transact";
+var subject="Your otp for E-mail verification";
+var key="5b6a20bb-d369-438e-a0c6-9a4fbdc503f6";
+
+
+
+
+
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+    {
+
+//-----------ajax part to call api for sending otp-------------
+
+//api is called with data in GET request
+//Responce will be handled and hash value will be set
+
+      $.ajax({
+          url:"https://cloudpal.in/api/mail/requestmail.php?name="+dname+"&mail="+mail+"&subject="+subject+"&key="+key,
+          type: 'GET',
+   crossDomain: true,
+   dataType: 'text',
+   
+   success: function(data){
+     var mydata = JSON.parse(data);
+var responcestatus=mydata.data[0].status;
+if(responcestatus=="success")
+{
+  responcehash=mydata.data[0].hash;
+  otpstate=1;
+  alert("OTP sent to mail");
+}
+      
+        }
+      
+  });
+//----------------------------------------------------------------------
+
+
+
+
+    }
+    else
+    {
+    alert("Enter email in valid format");
+    
+    }
+
+
+
+
+  
 }
 
 
@@ -642,6 +755,20 @@ function checkCookie() {
 }
 
 
+$.ajax({
+          url:"http://worldtimeapi.org/api/timezone/Indian/Cocos",
+          type: 'GET',
+   crossDomain: true,
+   dataType: 'text',
+   
+   success: function(data){
+     
+
+     alert(data);
+//var responcestatus=mydata.data[0].status;
+
+   }  
+  });
 
 
 
